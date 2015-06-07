@@ -15,17 +15,21 @@
 //= require angular-ui-router
 //= require angular-rails-templates
 //= require_self
+//  ---- load modules ----
+//= require home/home.module
+//  ---- load everything else ----
 //= require_tree .
 
 
 
 angular.module('emailReminder', [
   'ui.router',
-  'templates'
-]);
-
-
-
-angular.module('emailReminder').controller('fooCtrl', function($scope){
-  $scope.hello = 'HI THERE';
+  'templates',
+  'emailReminder.home'
+])
+.config(function($stateProvider, $urlRouterProvider) {
+  //
+  // For any unmatched url, redirect to /state1
+  $urlRouterProvider.otherwise("/home");
 });
+
