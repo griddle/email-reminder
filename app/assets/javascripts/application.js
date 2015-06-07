@@ -11,5 +11,21 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
-//= require angular/angular
+//= require angular
+//= require angular-ui-router
+//= require angular-rails-templates
+//= require_self
 //= require_tree .
+
+
+
+angular.module('emailReminder', [
+  'ui.router',
+  'templates'
+]);
+
+
+
+angular.module('emailReminder').controller('fooCtrl', function($scope){
+  $scope.hello = 'HI THERE';
+});

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="emailReminder">
 <head>
   <title>EmailReminder</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -12,6 +12,11 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
+
+<div ng-controller="fooCtrl">
+  {{hello}} g money
+  <div ng-include='"foo.html"'></div>
+</div>
 
 <%= yield %>
 

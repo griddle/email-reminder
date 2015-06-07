@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
+
+gem 'sprockets', '2.12.3'  # 'angular-rails-templates' requires < 3
+
 # Use pg as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -24,10 +27,13 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
+gem "haml-rails", "~> 0.9"
+
 gem 'devise'
 
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
+gem 'angular-rails-templates'
 
 
 # Use ActiveModel has_secure_password
