@@ -5,6 +5,19 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root to: "main#index"
+  
+  
+  
+  namespace :api do
+    namespace :v1 do
+      
+      resource :users, only: [] do
+        get 'me'
+      end
+      
+    end
+  end
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
