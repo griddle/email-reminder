@@ -13,10 +13,12 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-ui-router
+//= require angular-resource
 //= require angular-rails-templates
 //= require_self
 //  ---- load modules ----
 //= require home/home.module
+//= require models/models.module
 //  ---- load everything else ----
 //= require_tree .
 
@@ -25,8 +27,10 @@
 angular.module('emailReminder', [
   'ui.router',
   'templates',
-  'emailReminder.home'
+  'emailReminder.home',
+  'emailReminder.models'
 ])
+.constant('apiPath', '/api/v1/')
 .config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
